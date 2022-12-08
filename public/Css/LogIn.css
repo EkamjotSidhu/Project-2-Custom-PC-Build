@@ -1,0 +1,144 @@
+#nav {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px 0px 20px;
+    width: 100%;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  /*added font weight, size and letter spacing in nav p a tags*/
+  header nav p a {
+    text-decoration: none;
+    color: rgb(0, 242, 255);
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none !important;
+  }
+  
+  header nav p a:hover {
+    color: rgb(0, 242, 255);
+  
+  }
+  
+  /* added display as flex and also added some column gap beside that I hav ealso set a font size and weight and remove the liste style*/
+  header div ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    list-style-type: none;
+    font-weight: 600;
+  
+  }
+  
+  /* added a color to a tag under ul header and removed the text decoration also added hover and active color */
+  header nav ul a {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  header nav ul a:hover {
+    color: rgb(0, 242, 255);
+    text-decoration: none;
+  }
+  
+  header nav div ul:active {
+    color: rgb(0, 242, 255);
+  }
+  
+  /* form */
+  form {
+    color: transparent;
+    box-shadow: 0px 6px 18px 7px #00f2ff45;
+    border: solid 1px transparent;
+    border-radius: 4px;
+  }
+    
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: transparent;
+      box-sizing: border-box;
+    }
+    
+    #form-section {
+      display: flex;
+      column-gap: 30px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 70px 70px 70px 70px;
+      flex-wrap: wrap;
+      row-gap: 60px;
+  }
+  
+  .form-div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  h1 {
+    color: rgb(0, 242, 255);
+  }
+  
+  b { 
+    color: rgb(0, 242, 255);
+  }
+  
+  p {
+    color: rgb(0, 242, 255);
+  }
+  
+  
+    /* Set a style for all buttons */
+    button {
+      background-color: rgb(0, 242, 255);
+      color:black;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    /* Add a hover effect for buttons */
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .form-div {
+      width: 100%;
+    }
+  }
+  
