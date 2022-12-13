@@ -15,17 +15,17 @@
 // }
 
 
-const response = fetch('http://localhost:3001/api/prebuild/',{
-                method:"GET",
-                headers: { 'Content-Type': 'application/json' }
-            })
+const response = fetch('http://localhost:3001/api/prebuild/', {
+  method: "GET",
+  headers: { 'Content-Type': 'application/json' }
+})
   .then((response) => response.json())
   .then((data) => console.log(data))
-  .catch(err=>{
-    console.log(err)
+  .catch(err => {
+    console.log(err);
   })
 
 
-const budgetPc= document.querySelector("#budget-pc");
+const budgetPc = document.querySelector("#budget-pc");
 
 budgetPc.addEventListener('click', preBuild);
