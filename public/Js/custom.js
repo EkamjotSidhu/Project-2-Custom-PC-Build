@@ -1,0 +1,1 @@
+//callss get route for the custom page 
