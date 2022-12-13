@@ -1,17 +1,26 @@
-async function logIn(event){
-    event.preventDefault()
-    try{
-        const emailLogIn = document.querySelector("#loginEmail").value;
-        const passwordLogIn = document.querySelector("#loginPassword").value;
-        const response= await fetch('/user',{
-            method:'GET',
-            headers: { 'Content-Type': 'application/json' }
-        });
-        
-    }catch(err){
-        console.log(err);
-    }
-}
+// async function logIn(event){
+//     event.preventDefault()
+//     try{
+//         const emailLogIn = document.querySelector("#loginEmail").value;
+//         const passwordLogIn = document.querySelector("#loginPassword").value;
+//         const response= await fetch('http://localhost:3001/api/user',{
+//             method:'GET',
+//             body: JSON.stringify({email:emailLogIn, password:passwordLogIn}),
 
-const loginButton = document.querySelector("#loginButton");
-loginButton.addEventListener("submit", logIn);
+
+//             headers: { 'Content-Type': 'application/json' }
+//         });
+
+//         console.log(response);
+//         if(response.ok){
+//             document.location.replace('/');
+//         }else{
+//             alert(response.statusText);
+//         }
+//     }catch(err){
+//         console.log(err);
+//     }
+// }
+
+// const loginButton = document.querySelector("#loginButton");
+// loginButton.addEventListener("submit", logIn);

@@ -1,61 +1,4 @@
-#nav {
-    background-color: transparent;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 20px 0px 20px;
-    width: 100%;
-  }
-  
-  body {
-    background-color: black;
-  }
-  
-  /*added font weight, size and letter spacing in nav p a tags*/
-  header nav p a {
-    text-decoration: none;
-    color: rgb(0, 242, 255);
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-decoration: none !important;
-  }
-  
-  header nav p a:hover {
-    color: rgb(0, 242, 255);
-  
-  }
-  
-  /* added display as flex and also added some column gap beside that I hav ealso set a font size and weight and remove the liste style*/
-  header div ul {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 50px;
-    list-style-type: none;
-    font-weight: 600;
-  
-  }
-  
-  /* added a color to a tag under ul header and removed the text decoration also added hover and active color */
-  header nav ul a {
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-decoration: none;
-    color: white;
-  }
-  
-  header nav ul a:hover {
-    color: rgb(0, 242, 255);
-    text-decoration: none;
-  }
-  
-  header nav div ul:active {
-    color: rgb(0, 242, 255);
-  }
-  
+
   /* form */
   form {
     color: transparent;
@@ -83,6 +26,7 @@
       padding: 70px 70px 70px 70px;
       flex-wrap: wrap;
       row-gap: 60px;
+      background-color: black;
   }
   
   .form-div {
@@ -126,7 +70,7 @@
   }
   
   /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
+  @media (max-width: 300px) {
     span.psw {
       display: block;
       float: none;
