@@ -93,3 +93,20 @@ h5 {
     scale: 2;
     transition-duration: 1s;
 }
+
+.monitor-card>img {
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+    opacity: 0.8"   
+}
+
+.monitor-card {
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    display: flexbox;
+    text-align: center;
+    align-items: center;
+    color: lightgrey;
+}
