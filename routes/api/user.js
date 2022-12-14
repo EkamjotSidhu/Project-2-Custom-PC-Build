@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const user = require('../../Models/User');
+// const user = require('../../Models/User');
+const {User,saveConfig}= require('../../Models')
 const sequelize = require('../../config/connection');
 
 
 router.post('/', async (req, res) => {
     try {
-        const postUser = await user.create({
+        const postUser = await User.create({
             name:req.body.name,
             email:req.body.email,
             password: req.body.password
@@ -24,7 +25,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const loginUser = await user.findOne({
+        const loginUser = await User.findOne({
             where: { email: req.body.email }
         });
         if (!loginUser) {
@@ -46,6 +47,17 @@ router.post('/login', async (req, res) => {
     } catch (err) { res.status(500).json(err) }
 })
 
+
+
+router.get('/', async(req,res)=>{
+    try{
+        const getUser= await User.findAll({include:[{model:saveConfig}]})
+
+        res.status(200).json(getUser)
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
 
 router.post('/logout', (req, res) => {
     
