@@ -6,31 +6,31 @@
                 <h1>Gaming <mark class="mark">PC's</mark></h1>
                 <div class="d-flex flex-wrap justify-content-around" id="gaming-cards">
 
-                    <div class="card align-items-center" id="budget-pc">
-                        <img src="Assets/budgetBuild.jpg" alt="Image of a prebuilt PC">
+                    <div class="gaming-card align-items-center" id="budget-pc">
+                        <img src="Assets/budgetBuild.jpg" alt="Image of a prebuilt PC" id="budgetPc">
                         <h5 class="heading-category">Budget gaming PC</h5>
                         <p>CPU: Intel Core i3-12100F</p>
                         <p>GPU: ASUS RX 6400 4GB</p>
                         <p>Price: $1106</p>
-                        <button type="button" class="btn btn-info" id="button">Info</button>
+                        <button class="btn btn-info" id="budget">Info</button>
                     </div>
 
-                    <div class="card align-items-center" id="mid-pc">
-                        <img src="Assets/midBuild.jpg" alt="Image of a prebuilt PC">
+                    <div class="gaming-card align-items-center" id="mid-pc">
+                        <img src="Assets/midBuild.jpg" alt="Image of a prebuilt PC" id="midPc">
                         <h5 class="heading-category">Mid Tier Gaming PC</h5>
                         <p>CPU: AMD Ryzen 5 5600X</p>
                         <p>GPU: ASRock Radeon RX 6700</p>
                         <p>Price: $1472</p>
-                        <button type="button" class="btn btn-info" id="button">Info</button>
+                        <button type="button" class="btn btn-info" id="mid">Info</button>
                     </div>
 
-                    <div class="card align-items-center" id="high-end-pc">
-                        <img src="Assets/highEndBuild.jpg" alt="Image of a prebuilt PC">
+                    <div class="gaming-card align-items-center" id="high-end-pc">
+                        <img src="Assets/highEndBuild.jpg" alt="Image of a prebuilt PC" id="highPc">
                         <h5 class="heading-category">High End Gaming PC</h5>
                         <p>CPU: AMD Ryzen 5 5600X</p>
                         <p>GPU: ASRock Radeon RX 6700</p>
                         <p>Price: $3505</p>
-                        <button type="button" class="btn btn-info" id="button">Info</button>
+                        <button type="button" class="btn btn-info" id="high-end">Info</button>
                     </div>
 
                 </div>
@@ -44,22 +44,22 @@
                 <h1>Video Editing <mark class="mark">PC's</mark></h1>
                 <div class="d-flex flex-wrap justify-content-around" id="edit-cards">
 
-                    <div class="card align-items-center" id="pro-edit-pc">
-                        <img src="Assets/midBuild.jpg" alt="Image of a prebuilt PC">
+                    <div class="edit-card align-items-center" id="pro-edit-pc">
+                        <img src="Assets/midBuild.jpg" alt="Image of a prebuilt PC" id="pro-edit">
                         <h5 class="heading-category">Professional Video Editing PC</h5>
                         <p>CPU: Intel Core i5-13600K</p>
                         <p>GPU: ASRock Radeon RX 6700</p>
                         <p>Price: $2160</p>
-                        <button type="button" class="btn btn-info" id="button">Info</button>
+                        <button type="button" class="btn btn-info" id="proEdit">Info</button>
                     </div>
 
-                    <div class="card align-items-center" id="super-edit-pc">
-                        <img src="Assets/superPc.jpg" alt="Image of a prebuilt PC">
+                    <div class="edit-card align-items-center" id="super-edit-pc">
+                        <img src="Assets/superPc.jpg" alt="Image of a prebuilt PC" id="super-edit">
                         <h5 class="heading-category">Video Editing Beast</h5>
                         <p>CPU: AMD Ryzen 9 7950X</p>
                         <p>GPU: ASUS TUF GeForce RTX 3090</p>
                         <p>Price: $5759</p>
-                        <button type="button" class="btn btn-info" id="button">Info</button>
+                        <button type="button" class="btn btn-info" id="superEdit">Info</button>
                     </div>
 
                 </div>
@@ -69,7 +69,7 @@
 
     <!--        MODAL TO POPULATE INFORMATION ONCLICK OF PC CARD         -->
         <div class="modal-background hidden" id="modal">
-            <div class="modal-card" id="modal-content">
+            <div class="modal-gaming-card" id="modal-content">
               <span class="modal-close">&times;</span>
               <!-- new elements added here -->
             </div>

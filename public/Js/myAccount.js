@@ -6,6 +6,8 @@ window.onload= async()=>{
         })
 
         console.log(response);
+        //ON WINDOW LOAD GET SAVECONFIG TABLE AND CREATE BUTTONS
+
     }catch(err){
         console.log(err)
     }

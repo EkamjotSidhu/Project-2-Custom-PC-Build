@@ -95,14 +95,14 @@ h5 {
     transition-duration: 1s;
 }
 
-.monitor>img {
+.monitor-card>img {
     height: 70px;
     width: 70px;
     border-radius: 5px;
     opacity: 0.8"   
 }
 
-.monitor {
+.monitor-card {
     border-radius: 5px;
     width: 100px;
     height: 100px;
