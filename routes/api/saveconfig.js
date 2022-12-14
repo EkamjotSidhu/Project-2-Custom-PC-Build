@@ -4,11 +4,20 @@ const sequelize = require('../../config/connection');
 
 router.post('/', async(req,res)=>{
     try{
-        const postConfig= await saveConfig.create(req.body);
+        const postConfig= await saveConfig.create({
+            processor: req.body.processor,
+            ram: req.body.ram,
+            storage: req.body.storage,
+            motherboard: req.body.motherboard,
+            keyboard: req.body.keyboard,
+            gpu: req.body.gpu,
+            cases: req.body.cases,
+            casefan: req.body.casefan,
+            cpu: req.body.cpu,
+            monitor: req.body.monitor
+        });
 
-        ///res.status(200).json(postConfig);
-        /// saved 
-        res.render(); 
+        res.status(200).json(postConfig);
     }catch(err){
         res.status(500).json(err);
     }

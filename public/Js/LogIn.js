@@ -1,27 +1,29 @@
 async function logIn(event){
     event.preventDefault()
     try{
-        const emailLogIn = document.querySelector("#loginEmail").value;
-        // const passwordLogIn = document.querySelector("#loginPassword").value;
+        const emailLogIn = document.querySelector("#loginEmail").value.trim();
+        const passwordLogIn = document.querySelector("#loginPassword").value.trim();
         // console.log(email)
-        const response= await fetch('http://localhost:3001/api/user',{
-            method:'GET',
-            body: JSON.stringify({email:emailLogIn}),
 
-
-            headers: { 'Content-Type': 'application/json' }
-        });
-
-        console.log(response);
-        if(response.ok){
-            document.location.replace('/');
-        }else{
-            alert(response.statusText);
+        if (emailLogIn && passwordLogIn){
+            const response= await fetch('http://localhost:3001/api/user/login',{
+                method:'POST',
+                body: JSON.stringify({email:emailLogIn,password:passwordLogIn}),
+                headers: { 'Content-Type': 'application/json' }
+            });
+    
+            console.log(response);
+            if(response.ok){
+                document.location.replace('/custom-pc');
+            }else{
+                alert(response.statusText);
+            }
         }
+       
     }catch(err){
         console.log(err);
     }
 }
 
 const loginButton = document.querySelector("#loginButton");
-loginButton.addEventListener("submit", logIn);
+loginButton.addEventListener("click", logIn);
