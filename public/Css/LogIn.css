@@ -23,11 +23,21 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      padding: 70px 70px 70px 70px;
+      padding: 260px 70px 70px 70px;
       flex-wrap: wrap;
       row-gap: 60px;
       background-color: black;
+      margin-top: -210px;
   }
+
+  div#main-form-div {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 100px;
+    width: 80%;
+    row-gap: 80px;
+    align-items: center;
+}
   
   .form-div {
     width: 50%;
@@ -70,7 +80,20 @@
   }
   
   /* Change styles for span and cancel button on extra small screens */
-  @media (max-width: 300px) {
+  @media (max-width: 347px) {
+
+    #form-section {
+      display: flex;
+      column-gap: 30px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 337px 70px 70px 70px;
+      flex-wrap: wrap;
+      row-gap: 60px;
+      background-color: black;
+      margin-top: -288px;
+  }
     span.psw {
       display: block;
       float: none;
@@ -80,9 +103,21 @@
     }
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
+    div#main-form-div {
+      display: flex;
+      justify-content: center;
+      column-gap: 100px;
+      width: 80%;
+      flex-wrap: wrap;
+      row-gap: 80px;
+      width: 100%;
+  }
     .form-div {
       width: 100%;
     }
+    
   }
+
+ 
   
