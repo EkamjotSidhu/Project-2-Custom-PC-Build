@@ -52,10 +52,10 @@ saveconfig.init(
       allowNull: true
     },
 
-    monitor: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
+    // monitor: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
