@@ -27,6 +27,7 @@
     "firebase": "^9.15.0",
     "firebase-admin": "^11.3.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.26.0"
+    "sequelize": "^6.26.0",
+    "connect-session-sequelize": "^7.1.5"
   }
 }
