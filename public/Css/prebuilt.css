@@ -44,7 +44,20 @@ h5 {
     margin-left: -10px;
 }
 
-.card {
+.gaming-card {
+    border-radius: 5%;
+    background-color: black;
+    color: rgb(0, 242, 255);
+    width: 300px;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 16px;
+    padding: 15px;
+    border: solid 1px rgb(0, 242, 255);
+    border-radius: 5px;
+}
+
+.edit-card {
     border-radius: 5%;
     background-color: black;
     color: rgb(0, 242, 255);
@@ -70,6 +83,10 @@ img {
     margin: 5px;
 }
 
+li {
+    list-style: none;
+}
+
 /*      MODAL CSS        */
 .hidden {
     display: none;
@@ -86,8 +103,9 @@ img {
     overflow: auto;
 }
 
-.modal-card {
-    background-color: #1db954;
+.modal-gaming-card {
+    background-color: #000000;
+    color: white;
     margin: 10% auto;
     padding: 21px;
     z-index: 1;
@@ -95,10 +113,13 @@ img {
     width: fit-content;
     height: fit-content;
     overflow: auto;
+    box-shadow: 0px 6px 18px 7px #00f2ff45;
+    border: solid 1px transparent;
+    border-radius: 4px;
 }
 
 .modal-close {
-    color: black;
+    color: white;
     float: right;
     font-size: xx-large;
 }
@@ -107,6 +128,20 @@ img {
     font-size: 45px;
     transition: 0.3s;
     color: red;
+}
+
+.towerImg {
+    width: 400px;
+    height: fit-content;
+}
+
+#modalDiv h3 {
+    color:rgb(0, 242, 255);
+    font-size: 22px;
+}
+
+.pcInfo li {
+    padding-bottom: 5px;
 }
 
 @media (max-width: 779px){
