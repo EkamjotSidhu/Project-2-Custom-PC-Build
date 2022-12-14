@@ -66,7 +66,7 @@ components.addEventListener('click', (e) => {
                 let item = partName.textContent;
                 const selectLi = document.querySelector(`.${item}`);
                 console.log(selectLi)
-                
+
                 const img = event.childNodes[0].src;
                 const name = event.childNodes[1].innerHTML;
                 const link = event.childNodes[2].href;
@@ -167,9 +167,10 @@ monitorBtn.addEventListener('click', (e) => {
                 console.log(event)
                 const partName = document.querySelector('.pcPart');
                 let item = partName.textContent;
-                const selectLi = document.querySelector(`.${item}`);
-                console.log(selectLi)
-                
+
+                const selectLi = document.querySelector("." + item);
+                console.log(item)
+
                 // GET INFORMATION OF PC PART FROM selected parts section
                 // const img = event.childNodes[0].src;
                 const name = event.childNodes[0].innerHTML;
@@ -196,10 +197,10 @@ monitorBtn.addEventListener('click', (e) => {
                 pTag4.innerHTML = price;
                 selectLi.append(pTag, pTag2, pTag3, pTag4)
                 removeChoices();
-    
+
             })
         })
-            .catch(err => console.log(err))
+        .catch(err => console.log(err))
 
 })
 
@@ -234,15 +235,24 @@ async function saveConfig(event) {
         const postProcessor = document.querySelector(".processorName").innerHTML;
         console.log(postProcessor);
         const postRam = document.querySelector(".ramName").innerHTML;
+        console.log(postRam)
         const postStorage = document.querySelector(".storageName").innerHTML;
+        console.log(postStorage)
         const postMotherboard = document.querySelector(".motherboardName").innerHTML;
+        console.log(postMotherboard)
         const postKeyboard = document.querySelector(".keyboardName").innerHTML;
+        console.log(postKeyboard)
         const postGpu = document.querySelector(".gpuName").innerHTML;
-        const postCases = document.querySelector(".casesName").innerHTML;
-        const postCaseFan = document.querySelector(".casefanName").innerHTML;
-        const postCpu = document.querySelector(".cpuName").innerHTML;
-        const postMonitor = document.querySelector(".monitorName").innerHTML;
-
+        console.log(postGpu)
+        const postCases = document.querySelector(".caseName").innerHTML;
+        console.log(postCases)
+        const postCaseFan = document.querySelector(".case_fanName").innerHTML;
+        console.log(postCaseFan)
+        const postCpu = document.querySelector(".cpu_fanName").innerHTML;
+        console.log(postCpu)
+        // const postMonitor = document.querySelector(".monitorName").innerHTML;
+        // console.log(postMonitor)
+        // console.log(`Cases ${postCases}`)
         const response = await fetch('http://localhost:3001/api/saveconfig', {
             method: 'POST',
             body: JSON.stringify({
@@ -255,7 +265,7 @@ async function saveConfig(event) {
                 cases: postCases,
                 casefan: postCaseFan,
                 cpu: postCpu,
-                monitor: postMonitor
+                // monitor: postMonitor
             }),
             headers: { 'Content-Type': 'application/json' }
         })

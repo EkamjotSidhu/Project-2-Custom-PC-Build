@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class saveconfig extends Model {}
+class saveconfig extends Model { }
 
 saveconfig.init(
   {
@@ -23,38 +23,46 @@ saveconfig.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    motherboard:{
-      type:DataTypes.STRING,
-      allowNull:true
-    },
-    keyboard:{
+    motherboard: {
       type: DataTypes.STRING,
-      allowNull:true
+      allowNull: true
     },
-
-    gpu:{
+    keyboard: {
       type: DataTypes.STRING,
-      allowNull:true
+      allowNull: true
     },
 
-    cases:{
+    gpu: {
       type: DataTypes.STRING,
-      allowNull:true
+      allowNull: true
     },
 
-    casefan:{
+    cases: {
       type: DataTypes.STRING,
-      allowNull:true
+      allowNull: true
     },
 
-    cpu:{
+    casefan: {
       type: DataTypes.STRING,
-      allowNull:true
+      allowNull: true
     },
-    
-    monitor:{
+
+    cpu: {
       type: DataTypes.STRING,
-      allowNull:true
+      allowNull: true
+    },
+
+    // monitor: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true
+    // },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'User',
+        key: 'id'
+      }
     }
 
   },

@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
-router.get('/', async (req,res)=>{
+router.get('/', withAuth, async (req,res)=>{
     try{
         await res.render('custom-pc');
     }catch(err){
