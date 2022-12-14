@@ -1,3 +1,4 @@
+
 const response = fetch('http://localhost:3001/api/saveconfig', {
     method: "GET",
     headers: { 'Content-Type': 'application/json' }
@@ -83,5 +84,4 @@ const response = fetch('http://localhost:3001/api/saveconfig', {
     .catch(err => {
         console.log(err);
     })
-
 
